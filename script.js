@@ -8,7 +8,8 @@ if(button){
 
 button.addEventListener("click", function(){
 
-alert("🚀 Welcome to CreatorBoost AI!");
+document.getElementById("tools").scrollIntoView({
+    behavior: "smooth"
 
 });
 
