@@ -90,3 +90,68 @@ body{
 .btn:hover{
     transform:scale(1.08);
 }
+/* ===========================
+   AI Tools / Cards
+=========================== */
+
+.tools,
+.youtube,
+.blog,
+.contact{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.tools h2,
+.youtube h2,
+.blog h2,
+.contact h2{
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    transition:.4s;
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:#2563eb;
+}
+
+.card h3{
+    font-size:26px;
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.7;
+    color:#ddd;
+}
+
+.card a{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:white;
+    color:#2563eb;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.card a:hover{
+    background:#ffd700;
+    color:#111;
+}
