@@ -35,3 +35,58 @@ output.value = random;
 
 });
 }
+const scriptBtn = document.getElementById("generateScript");
+const scriptOutput = document.getElementById("scriptOutput");
+
+const scripts = [
+
+`Title:
+Top 5 AI Tools That Will Save You Hours Every Day
+
+Intro:
+Welcome back! Today we'll discover five amazing AI tools that can save your time and increase productivity.
+
+Point 1:
+ChatGPT for writing.
+
+Point 2:
+Canva AI for design.
+
+Point 3:
+CapCut AI for video editing.
+
+Ending:
+Like, Share and Subscribe for more AI tips!`,
+
+`Title:
+How to Earn Money Online in 2026
+
+Intro:
+Online earning is easier than ever with AI.
+
+Point 1:
+Freelancing
+
+Point 2:
+YouTube Automation
+
+Point 3:
+Affiliate Marketing
+
+Ending:
+Subscribe for daily online earning tips.`
+
+];
+
+if(scriptBtn){
+
+scriptBtn.addEventListener("click",function(){
+
+const randomScript =
+scripts[Math.floor(Math.random()*scripts.length)];
+
+scriptOutput.value = randomScript;
+
+});
+
+}
