@@ -1,4 +1,4 @@
-console.log("CreatorBoost AI Loaded Successfully!");
+console.log("SumPilot AI Loaded Successfully!");
 
 const button = document.querySelector(".btn");
 
