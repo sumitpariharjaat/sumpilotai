@@ -115,3 +115,59 @@ thumbnailOutput.value = random;
 });
 
 }
+const generateScriptBtn = document.getElementById("generateScript");
+const scriptOutput = document.getElementById("scriptOutput");
+
+if (generateScriptBtn) {
+
+    generateScriptBtn.addEventListener("click", function () {
+
+        const topic = document.getElementById("videoTopic").value;
+        const language = document.getElementById("language").value;
+
+        if (topic === "") {
+            alert("Please enter a video topic.");
+            return;
+        }
+
+        let script = "";
+
+        if (language === "Hindi") {
+
+            script =
+`🎬 वीडियो विषय: ${topic}
+
+नमस्कार दोस्तों!
+
+आज की इस वीडियो में हम बात करेंगे "${topic}" के बारे में।
+
+इस वीडियो में आप जानेंगे:
+✅ यह क्या है?
+✅ इसका उपयोग कैसे करें?
+✅ इससे क्या फायदे होंगे?
+
+अगर वीडियो पसंद आए तो Like करें, Share करें और Channel को Subscribe करना न भूलें।`;
+
+        } else {
+
+            script =
+`🎬 Video Topic: ${topic}
+
+Hello Everyone!
+
+Today we are going to talk about "${topic}".
+
+In this video you will learn:
+✅ What it is
+✅ How to use it
+✅ Its benefits
+
+If you enjoyed this video, don't forget to Like, Share and Subscribe.`;
+
+        }
+
+        scriptOutput.value = script;
+
+    });
+
+}
