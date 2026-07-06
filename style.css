@@ -230,3 +230,17 @@ footer p{
 }
 
 }
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:28px;
+    font-weight:bold;
+    color:white;
+}
+
+.logo-img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+}
