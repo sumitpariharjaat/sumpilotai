@@ -1,110 +1,196 @@
-console.log("SumPilot AI Loaded Successfully!");
+// ==========================================
+// SumPilot AI
+// Main JavaScript File
+// Version 1.0
+// ==========================================
 
-// Hero Button Scroll
-const heroBtn = document.querySelector(".btn");
+console.log("SumPilot AI Loaded Successfully");
 
-if (heroBtn) {
-    heroBtn.addEventListener("click", function (e) {
-        e.preventDefault();
+// ==========================================
+// GET ELEMENTS
+// ==========================================
 
-        const tools = document.getElementById("tools");
-
-        if (tools) {
-            tools.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-    });
-}
-
-// AI Prompt Generator
 const generatePromptBtn = document.getElementById("generatePrompt");
 const promptOutput = document.getElementById("promptOutput");
 
-const prompts = [
-    "Write a viral YouTube script about AI earning.",
-    "Create a cinematic thumbnail prompt for a luxury car.",
-    "Write a motivational story in Hindi.",
-    "Generate a YouTube Shorts script on ChatGPT.",
-    "Create a thumbnail prompt with dramatic lighting.",
-    "Write a blog about online earning in 2026.",
-    "Generate an Instagram caption for AI tools.",
-    "Create a viral video idea for YouTube."
-];
-
-if (generatePromptBtn) {
-
-    generatePromptBtn.addEventListener("click", function () {
-
-        const randomPrompt =
-            prompts[Math.floor(Math.random() * prompts.length)];
-
-        promptOutput.value = randomPrompt;
-
-    });
-
-}
-
-// YouTube Script Generator
 const generateScriptBtn = document.getElementById("generateScript");
 const scriptOutput = document.getElementById("scriptOutput");
 
-if (generateScriptBtn) {
+const generateThumbnailBtn = document.getElementById("generateThumbnail");
+const thumbnailOutput = document.getElementById("thumbnailOutput");
 
-    generateScriptBtn.addEventListener("click", function () {
+const generateBlogBtn = document.getElementById("generateBlog");
+const blogOutput = document.getElementById("blogOutput");
 
-        const topic = document.getElementById("videoTopic").value;
-        const language = document.getElementById("language").value;
+// ==========================================
+// FREE PLAN LIMIT
+// ==========================================
 
-        if (topic.trim() === "") {
-            alert("Please enter a video topic.");
-            return;
-        }
+let freeUses = 2;
 
-        let script = "";
+function checkLimit() {
 
-        if (language === "Hindi") {
+    if (freeUses <= 0) {
 
-            script =
-`🎬 वीडियो विषय: ${topic}
+        alert("Free limit finished. Upgrade to Premium.");
 
-नमस्कार दोस्तों!
+        return false;
+    }
 
-आज की इस वीडियो में हम बात करेंगे "${topic}" के बारे में।
+    freeUses--;
 
-इस वीडियो में आप जानेंगे:
+    return true;
 
-✅ यह क्या है?
+}
 
-✅ इसका उपयोग कैसे करें?
+// ==========================================
+// AI PROMPTS
+// ==========================================
 
-✅ इससे क्या फायदे होंगे?
+const prompts = [
 
-अगर वीडियो पसंद आए तो Like करें, Share करें और Channel को Subscribe करना न भूलें।`;
+"Write a viral YouTube video about AI.",
 
-        } else {
+"Create an Instagram Reel script.",
 
-            script =
-`🎬 Video Topic: ${topic}
+"Write a motivational Hindi story.",
 
-Hello Everyone!
+"Generate a luxury car thumbnail prompt.",
 
-Today we are going to talk about "${topic}".
+"Create a business advertisement prompt.",
 
-In this video you will learn:
+"Write an AI blog outline.",
 
-✅ What it is
+"Generate an educational YouTube script idea.",
 
-✅ How to use it
+"Create a cinematic movie trailer prompt."
 
-✅ Benefits
+];
+// ==========================================
+// YOUTUBE SCRIPTS
+// ==========================================
 
-Don't forget to Like, Share and Subscribe.`;
+const scripts = [
 
-        }
+`Title: Top 5 AI Tools
 
-        scriptOutput.value = script;
+Intro:
+Today we will explore the best AI tools that can save hours every day.
 
-    });
+Point 1:
+ChatGPT
 
+Point 2:
+Canva AI
+
+Point 3:
+CapCut AI
+
+Ending:
+Like, Share and Subscribe!`,
+
+`Title: Earn Money Online
+
+Intro:
+Let's discover AI-powered online income ideas.
+
+Point 1:
+Freelancing
+
+Point 2:
+YouTube
+
+Point 3:
+Affiliate Marketing
+
+Ending:
+Subscribe for more earning tips.`
+
+];
+
+// ==========================================
+// THUMBNAIL PROMPTS
+// ==========================================
+
+const thumbnails = [
+
+"Ultra realistic YouTube thumbnail, golden sports car, cinematic lighting, 8K, dramatic colors.",
+
+"Indian businessman holding cash, AI futuristic city background, viral thumbnail, HDR.",
+
+"Poor boy becoming IAS officer, emotional, realistic, ultra detailed, YouTube thumbnail."
+
+];
+
+// ==========================================
+// BLOGS
+// ==========================================
+
+const blogs = [
+
+`Artificial Intelligence is changing the future of work.
+AI tools help creators generate content faster, improve productivity and save time.`,
+
+`Online earning in 2026 is growing rapidly.
+YouTube, freelancing and AI tools are creating new opportunities for everyone.`
+
+];
+
+// ==========================================
+// RANDOM GENERATOR
+// ==========================================
+
+function randomItem(array){
+
+return array[Math.floor(Math.random()*array.length)];
+
+}
+// AI Prompt Generator
+function generatePrompt() {
+    let topic = document.getElementById("topic").value;
+
+    if (topic === "") {
+        alert("कृपया अपना topic लिखें");
+        return;
+    }
+
+    let result = 
+    "आपके topic: " + topic + 
+    " के लिए एक शानदार AI prompt:\n\n" +
+    "Create a detailed, creative and professional content about " + topic +
+    ". Make it engaging, unique and high quality.";
+
+    document.getElementById("output").innerText = result;
+}
+
+
+// YouTube Script Generator
+function generateScript() {
+    let title = document.getElementById("title").value;
+
+    if (title === "") {
+        alert("कृपया video title लिखें");
+        return;
+    }
+
+    let script =
+    "Video Title: " + title + "\n\n" +
+    "Introduction:\nआज हम बात करेंगे " + title + " के बारे में।\n\n" +
+    "Main Content:\nइस विषय पर पूरी जानकारी और रोचक बातें।\n\n" +
+    "Ending:\nअगर आपको वीडियो पसंद आया तो Like और Subscribe करें।";
+
+    document.getElementById("output").innerText = script;
+}
+function generateBlog() {
+    alert("AI Blog Writer जल्द ही आपका blog तैयार करेगा!");
+}
+
+
+function generateThumbnail() {
+    alert("AI Thumbnail Prompt Generator शुरू हो गया!");
+}
+
+
+function generateCaption() {
+    alert("AI Caption Generator शुरू हो गया!");
 }
