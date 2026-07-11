@@ -1,0 +1,668 @@
+/* ==========================================
+   SumPilot AI V1.0
+   Premium Dark Theme
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:#ffffff;
+    line-height:1.7;
+}
+
+/* Navbar */
+
+.navbar{
+    background:#111827 !important;
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:700;
+    color:#ffffff !important;
+}
+
+.nav-link{
+    color:#d1d5db !important;
+    margin-left:20px;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#3b82f6 !important;
+}
+
+/* Hero */
+
+.hero{
+    padding:100px 0;
+}
+
+.hero h1{
+    font-size:58px;
+    font-weight:800;
+    line-height:1.2;
+}
+
+.hero span{
+    color:#3b82f6;
+}
+
+.hero p{
+    color:#cbd5e1;
+    font-size:20px;
+    margin-top:25px;
+    margin-bottom:35px;
+}
+
+.hero img{
+    width:100%;
+    max-width:420px;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-18px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* Buttons */
+
+.btn{
+    border-radius:12px;
+    padding:14px 35px;
+    font-weight:600;
+}
+
+.btn-primary{
+    background:#2563eb;
+    border:none;
+}
+
+.btn-primary:hover{
+    background:#1d4ed8;
+}
+/* ==========================================
+   Sections
+========================================== */
+
+section{
+    padding:90px 0;
+}
+
+section h2{
+    text-align:center;
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:50px;
+    color:#ffffff;
+}
+
+/* About */
+
+#about p{
+    color:#cbd5e1;
+    font-size:18px;
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+/* Tool Cards */
+
+.tool-card{
+    background:#1e293b;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:30px;
+    text-align:center;
+    transition:.35s;
+    margin-bottom:25px;
+}
+
+.tool-card:hover{
+    transform:translateY(-10px);
+    border-color:#3b82f6;
+    box-shadow:0 15px 40px rgba(59,130,246,.25);
+}
+
+.tool-card h4{
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.tool-card p{
+    color:#cbd5e1;
+}
+
+/* Cards */
+
+.card{
+    background:#1e293b;
+    border:none;
+    border-radius:20px;
+    color:#ffffff;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+/* Form */
+
+input,
+select,
+textarea{
+    background:#0f172a !important;
+    color:#ffffff !important;
+    border:1px solid #334155 !important;
+    border-radius:12px !important;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#94a3b8 !important;
+}
+
+textarea{
+    resize:none;
+}
+
+/* Pricing */
+
+#pricing .card{
+    transition:.3s;
+}
+
+#pricing .card:hover{
+    transform:translateY(-10px);
+}
+
+/* Footer */
+
+footer{
+    background:#020617;
+    padding:40px 0;
+}
+
+footer h4{
+    margin-bottom:15px;
+}
+
+footer p{
+    color:#94a3b8;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.hero{
+text-align:center;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero img{
+margin-top:40px;
+}
+
+}
+
+@media(max-width:576px){
+
+.hero h1{
+font-size:34px;
+}
+
+section h2{
+font-size:30px;
+}
+
+.btn{
+width:100%;
+}
+
+}
+/* ==========================================
+   Premium AI Tool Cards
+========================================== */
+
+.tool-card{
+    position:relative;
+    overflow:hidden;
+}
+
+.tool-card::before{
+    content:"";
+    position:absolute;
+    top:-100%;
+    left:-100%;
+    width:220%;
+    height:220%;
+    background:linear-gradient(
+        135deg,
+        transparent,
+        rgba(59,130,246,.15),
+        transparent
+    );
+    transform:rotate(25deg);
+    transition:.7s;
+}
+
+.tool-card:hover::before{
+    top:-30%;
+    left:-30%;
+}
+
+.tool-card i{
+    font-size:55px;
+    color:#3b82f6;
+    margin-bottom:20px;
+}
+
+.tool-card h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.tool-card p{
+    font-size:17px;
+}
+
+/* ==========================================
+   Generator Boxes
+========================================== */
+
+.generator-box{
+    background:#1e293b;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+    margin-bottom:40px;
+}
+
+.generator-box textarea{
+    min-height:220px;
+}
+
+.generator-box button{
+    margin-top:20px;
+}
+
+/* ==========================================
+   Output Area
+========================================== */
+
+.output-box{
+    background:#0f172a;
+    border:1px solid #334155;
+    border-radius:15px;
+    padding:20px;
+    color:#fff;
+    min-height:200px;
+    white-space:pre-wrap;
+}
+
+/* ==========================================
+   Copy Button
+========================================== */
+
+.copy-btn{
+    margin-top:15px;
+    border:none;
+    background:#16a34a;
+    color:#fff;
+    padding:12px 25px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.copy-btn:hover{
+    background:#15803d;
+}
+/* ==========================================
+   Premium Pricing Cards
+========================================== */
+
+.pricing-card{
+    background:#1e293b;
+    border-radius:20px;
+    padding:40px 30px;
+    text-align:center;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.pricing-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 50px rgba(59,130,246,.30);
+    border-color:#3b82f6;
+}
+
+.pricing-card h3{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.price{
+    font-size:50px;
+    font-weight:700;
+    color:#3b82f6;
+    margin:20px 0;
+}
+
+.pricing-card ul{
+    list-style:none;
+    padding:0;
+}
+
+.pricing-card ul li{
+    padding:10px 0;
+    color:#cbd5e1;
+}
+
+/* Contact */
+
+.contact-box{
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+}
+
+footer a{
+    color:#3b82f6;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:#60a5fa;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#3b82f6;
+}
+
+/* Fade Animation */
+
+.fade-up{
+    animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* Premium Badge */
+
+.badge-premium{
+    background:linear-gradient(90deg,#2563eb,#7c3aed);
+    color:#fff;
+    padding:6px 15px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* Selection */
+
+::selection{
+    background:#2563eb;
+    color:#fff;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.navbar-brand{
+font-size:24px;
+}
+
+.hero{
+padding:70px 0;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.generator-box{
+padding:25px;
+}
+
+.tool-card{
+padding:25px;
+}
+
+.pricing-card{
+margin-bottom:30px;
+}
+
+}
+/* Part 4 - Responsive Design */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#output {
+    margin-top: 20px;
+    padding: 15px;
+    background: #eef2ff;
+    border-radius: 8px;
+    white-space: pre-line;
+}
+
+
+/* Mobile View */
+
+@media(max-width:600px){
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111827;
+    color: white;
+    padding: 15px 30px;
+}
+
+nav h2 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: #e0f2fe;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+
+.hero button {
+    margin-top: 20px;
+    font-size: 16px;
+}
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+footer a:hover {
+    color: #60a5fa;
+}
+body {
+    background: #0f172a;
+    color: white;
+}
+
+.card {
+    background: #1e293b;
+    color: white;
+}
+
+.hero {
+    background: #111827;
+    color: white;
+}
+
+input {
+    background: #334155;
+    color: white;
+}
+
+#output {
+    background: #334155;
+    color: white;
+}
