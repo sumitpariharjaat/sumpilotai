@@ -1,1 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SumPilot AI - Create Smarter With AI</title>
 
+    <meta name="description" content="Generate AI Prompts, YouTube Scripts, Thumbnail Prompts and Blogs with SumPilot AI.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="#">
+🐯 SumPilot AI
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#features">Features</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#tools">AI Tools</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#pricing">Pricing</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- ===== HERO ===== -->
+
+<section id="home" class="hero">
+
+<div class="container text-center">
+
+<h1>Create Smarter With AI</h1>
+
+<p>
+Generate AI Prompts, YouTube Scripts, Thumbnail Prompts, Blogs and much more.
+</p>
+
+<a href="#tools" class="btn btn-primary btn-lg">
+Explore AI Tools
+</a>
+
+</div>
+
+</section>
+<!-- ===== FEATURES ===== -->
+
+<section id="features" class="py-5">
+
+<div class="container">
+
+<h2 class="text-center mb-5">Why Choose SumPilot AI?</h2>
+
+<div class="row">
+
+<div class="col-md-4 mb-4">
+<div class="card h-100 shadow-sm text-center p-4">
+<h3>⚡ Fast</h3>
+<p>Generate AI content in seconds.</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="card h-100 shadow-sm text-center p-4">
+<h3>🤖 AI Powered</h3>
+<p>Smart AI tools for creators and freelancers.</p>
+</div>
+</div>
+
+<div class="col-md-4 mb-4">
+<div class="card h-100 shadow-sm text-center p-4">
+<h3>💎 Premium</h3>
+<p>Professional quality output with a simple interface.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===== AI TOOLS ===== -->
+
+<section id="tools" class="py-5 bg-light">
+
+<div class="container">
+
+<h2 class="text-center mb-5">AI Tools</h2>
+
+<div class="row">
+
+<div class="col-md-6 mb-4">
+
+<div class="card shadow p-4">
+
+<h3>🤖 AI Prompt Generator</h3>
+
+<input
+id="promptTopic"
+type="text"
+class="form-control my-3"
+placeholder="Enter Topic">
+
+<button
+id="generatePrompt"
+class="btn btn-primary">
+
+Generate Prompt
+
+</button>
+
+<textarea
+id="promptOutput"
+class="form-control mt-3"
+rows="6"
+readonly
+placeholder="Generated Prompt..."></textarea>
+
+</div>
+
+</div>
+
+<div class="col-md-6 mb-4">
+
+<div class="card shadow p-4">
+
+<h3>🎬 YouTube Script Generator</h3>
+
+<input
+id="videoTopic"
+type="text"
+class="form-control my-3"
+placeholder="Video Topic">
+
+<button
+id="generateScript"
+class="btn btn-success">
+
+Generate Script
+
+</button>
+
+<textarea
+id="scriptOutput"
+class="form-control mt-3"
+rows="6"
+readonly
+placeholder="Generated Script..."></textarea>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===== MORE AI TOOLS ===== -->
+
+<section class="py-5">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-6 mb-4">
+
+<div class="card shadow p-4">
+
+<h3>🖼 AI Thumbnail Prompt Generator</h3>
+
+<input
+id="thumbnailTopic"
+type="text"
+class="form-control my-3"
+placeholder="Thumbnail Topic">
+
+<button
+id="generateThumbnail"
+class="btn btn-warning">
+
+Generate Thumbnail
+
+</button>
+
+<textarea
+id="thumbnailOutput"
+class="form-control mt-3"
+rows="6"
+readonly
+placeholder="Generated Thumbnail Prompt..."></textarea>
+
+</div>
+
+</div>
+
+<div class="col-md-6 mb-4">
+
+<div class="card shadow p-4">
+
+<h3>📝 AI Blog Writer</h3>
+
+<input
+id="blogTopic"
+type="text"
+class="form-control my-3"
+placeholder="Blog Topic">
+
+<button
+id="generateBlog"
+class="btn btn-danger">
+
+Generate Blog
+
+</button>
+
+<textarea
+id="blogOutput"
+class="form-control mt-3"
+rows="6"
+readonly
+placeholder="Generated Blog..."></textarea>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===== PRICING ===== -->
+
+<section id="pricing" class="py-5 bg-light">
+
+<div class="container">
+
+<h2 class="text-center mb-5">Choose Your Plan</h2>
+
+<div class="row">
+
+<div class="col-md-6 mb-4">
+
+<div class="card shadow p-4 text-center">
+
+<h3>Free</h3>
+
+<h1>₹0</h1>
+
+<p>2 Free Prompts</p>
+<p>2 Free Scripts</p>
+<p>Basic AI Tools</p>
+
+<button class="btn btn-outline-primary">
+Current Plan
+</button>
+
+</div>
+
+</div>
+
+<div class="col-md-6 mb-4">
+
+<div class="card shadow p-4 text-center">
+
+<h3>Premium</h3>
+
+<h1>₹199 / Month</h1>
+
+<p>Unlimited AI Prompts</p>
+<p>Unlimited Scripts</p>
+<p>Unlimited Blog Writer</p>
+
+<button class="btn btn-primary">
+Upgrade Now
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===== CONTACT ===== -->
+
+<section id="contact" class="py-5">
+
+<div class="container">
+
+<h2 class="text-center mb-5">Contact Us</h2>
+
+<div class="card shadow p-4">
+
+<input
+type="text"
+class="form-control mb-3"
+placeholder="Your Name">
+
+<input
+type="email"
+class="form-control mb-3"
+placeholder="Your Email">
+
+<textarea
+class="form-control mb-3"
+rows="5"
+placeholder="Your Message"></textarea>
+
+<button class="btn btn-success">
+Send Message
+</button>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===== FOOTER ===== -->
+
+<footer class="bg-dark text-white text-center py-4">
+
+<div class="container">
+
+<h3>🐯 SumPilot AI</h3>
+
+<p>Create Smarter With AI</p>
+
+<p>© 2026 SumPilot AI. All Rights Reserved.</p>
+
+</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
